@@ -1,0 +1,36 @@
+{% extends 'shared/layout.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary" onclick="btnClick(this)">Primary</button>
+            <button type="button" class="btn btn-secondary" onclick="btnClick(this)">Secondary</button>
+            <button type="button" class="btn btn-success" onclick="btnClick(this)">Success</button>
+            <button type="button" class="btn btn-danger" onclick="btnClick(this)">Danger</button>
+            <button type="button" class="btn btn-warning" onclick="btnClick(this)">Warning</button>
+            <button type="button" class="btn btn-info" onclick="btnClick(this)">Info</button>
+            <button type="button" class="btn btn-light" onclick="btnClick(this)">Light</button>
+            <button type="button" class="btn btn-dark" onclick="btnClick(this)">Dark</button>
+        
+            <button type="button" class="btn btn-link" onclick="btnClick(this)">Perfil</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            //alert('HelloWord!');
+        });
+
+        function btnClick(element) {
+            var msj = $(element).html();
+            if(msj === 'Perfil') {
+                location.href = 'perfil';
+            } else {
+                alert(msj);
+            }
+        }
+        
+    </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'shared/layout.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            Perfil
+            <button type="button" class="btn btn-link" onclick="btnHref()">Dashboard</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            //alert('HelloWord!');
+        });
+
+        function btnHref() {
+            location.href = 'index.php';
+        }
+        
+    </script>
+{% endblock %}
